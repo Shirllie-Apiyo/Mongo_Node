@@ -1,9 +1,17 @@
 // puling mongodb client
 const MongoClient = require('mongodb').MongoClient;
 
+//create a repo
+const circulationRepo =require('./repos/circulationRepo');
+
+//pull that data
+const data = require('./circulation.json');
+
+
+
 const url = 'mongodb://localhost:27017';
 //name of db
-const dbName = 'newspaper';
+const dbName = 'circulation';
 
 // create function main
 async function main(){
