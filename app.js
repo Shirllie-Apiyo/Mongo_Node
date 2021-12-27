@@ -20,7 +20,7 @@ async function main(){
 
 
     const results = await circulationRepo.loadData(data);
-    console.log(results.insertedCount); // show the data inserted  on the db
+    console.log(results.insertedCount,results.ops); // show the data inserted  on the db
     //admin is an object that allows some introspection on the server
     const admin = client.db(dbName).admin();
     // gives info about the server
