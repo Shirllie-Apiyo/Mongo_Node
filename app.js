@@ -22,6 +22,8 @@ async function main() {
   const results = await circulationRepo.loadData(data);
   assert.equal(data.length, results.insertedCount); // ensure you insert the right amount of data
 
+  const getData = await circulationRepo.get();
+  assert.equal(data.length, getData.length);
   //console.log(results.insertedCount,results.ops); // show the data inserted  on the db
   //admin is an object that allows some introspection on the server
   const admin = client.db(dbName).admin();
